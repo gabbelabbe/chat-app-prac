@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: 
+    -webkit-gradient(
+      linear,
+      left top, left bottom,
+      from(rgba(56,82,105,.41)),
+      to(rgba(56,82,105,.41))
+    ),
+    url('https://images.unsplash.com/photo-1592135841592-b635e8350ed8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header {
+  width: 100%;
+  background-color: #293C4D;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header button {
+  align-self: flex-end;
+  height: 100%;
+  border: none;
   color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.signOut {
+  background-color: #f44336;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.signIn {
+  background-color: #4CAF50;
+}
+
+.content {
+  margin: 0 30vw 0 30vw;
+  height: calc(100vh - 50px);
+  background-color: #507494;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 50px - 7vh);
+  overflow-y: scroll;
+}
+
+main::-webkit-scrollbar {
+  width: 0.25em;
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: #5E5EBF;
+}
+
+main::-webkit-scrollbar-track {
+  background-color: #6F6FE3;
+}
+
+img {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  margin: 1vw 1vw 0 1vw;
+}
+
+.messageSent {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.messageRecived {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+}
+
+p {
+  max-width: 500px;
+  margin-bottom: 1vw;
+  line-height: 24px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.messageSent p {
+  color: white;
+  background: #0b93f6;
+  align-self: flex-end;
+}
+
+.messageRecived p {
+  background: #e5e5ea;
+  color: black;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  height: 7vh;
+}
+
+form input {
+  width: 85%;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  background-color: #293C4D;
+  text-decoration: none;
+  padding-left: 1vw;
+}
+
+form button {
+  width: 15%;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
