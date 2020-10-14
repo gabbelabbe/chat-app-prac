@@ -45,7 +45,7 @@
 }
 
 .content {
-  margin: 0 30vw 0 30vw;
+  margin: 0 25vw 0 25vw;
   height: calc(100vh - 50px);
   background-color: #507494;
 }
@@ -143,4 +143,16 @@ form button {
 form button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+@media only screen and (max-width: 1300px) {
+  .content {
+    margin: 0 20vw 0 20vw;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .content {
+    margin: 0;
+  }
 }
