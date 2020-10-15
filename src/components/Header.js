@@ -29,9 +29,9 @@ export default function Header() {
     <header className='header'>
       {
         location.pathname.split('/')[location.pathname.split('/').length - 1] ? (
-          <h2>{room && room.roomName} Chat Room</h2>
+          <h2>{room && room.roomName}</h2>
         ) : (
-          <h2>Click A Card To Chat!</h2>
+          <h2>Chatter</h2>
         ) 
       }
       {user ? <SignOut /> : <SignIn />}

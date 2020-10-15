@@ -23,7 +23,6 @@ function App() {
     <div className="app">
       <Router>
         <Header />
-
         <Switch>
           <Route exact path='/'>
             {user ? <Landing /> : null}

@@ -210,4 +210,39 @@ form button:disabled {
   .content {
     margin: 0;
   }
+
+  .cardList {
+    margin-top: 0;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    padding: calc(2.5rem + 50px) 2.5rem 2.5rem 2.5rem;
+  }
+
+  .cardList::-webkit-scrollbar {
+    width: 0em;
+  }
+
+  .card:hover~.card {
+    transform: translateX(0px);
+  }
+  
+  .card:not(:first-child) {
+    margin-left: 0;
+  }
+
+  .card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 250px;
+    width: 250px;
+    min-width: 250px;
+    padding: 1.5rem;
+    transition: .2s;
+    border-radius: 16px;
+    background: #17141d;
+    box-shadow: 0 -1rem 3rem #000;
+    margin-top: -25px;
+  }
 }
