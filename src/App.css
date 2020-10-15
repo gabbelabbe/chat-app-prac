@@ -15,16 +15,71 @@
   background-size: cover;
 }
 
+.cardList {
+  margin-top: 25vh;
+  display: flex;
+  padding: 5rem 2.5rem 5rem 2.5rem;
+  overflow-x: scroll;
+}
+
+.cardList::-webkit-scrollbar {
+  height: 0.25em;
+}
+
+.cardList::-webkit-scrollbar-thumb {
+  background-color: #5E5EBF;
+}
+
+.cardList::-webkit-scrollbar-track {
+  background-color: #6F6FE3;
+}
+
+.card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 250px;
+  width: 250px;
+  min-width: 250px;
+  padding: 1.5rem;
+  transition: .2s;
+  border-radius: 16px;
+  background: #17141d;
+  box-shadow: -1rem 0 3rem #000;
+}
+
+.card:hover {
+  transform: translateY(-1rem);
+}
+
+.card:hover~.card {
+  transform: translateX(130px);
+}
+
+.card:not(:first-child) {
+  margin-left: -130px;
+}
+
+.cardHeader p, .cardHeader h2 {
+  color: white;
+}
+
 .header {
   width: 100%;
   background-color: #293C4D;
   height: 50px;
   display: flex;
-  flex-direction: column;
+}
+
+.header h2 {
+  color: white;
+  align-self: center;
+  margin-left: auto;
 }
 
 .header button {
   align-self: flex-end;
+  margin-left: auto;
   height: 100%;
   border: none;
   color: white;
@@ -88,7 +143,7 @@ img {
   flex-direction: row;
 }
 
-p {
+.messageSent p, .messageRecived p {
   max-width: 500px;
   margin-bottom: 1vw;
   line-height: 24px;
